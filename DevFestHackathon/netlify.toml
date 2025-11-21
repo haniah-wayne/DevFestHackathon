@@ -1,0 +1,12 @@
+
+[build]
+  # Set the base to the frontend folder so Netlify runs installs and builds there.
+  base = "frontend"
+  command = "npm install && npm run build"
+  publish = "dist"
+
+[context.production.environment]
+  # Set this to the publicly reachable backend API URL after you deploy the backend.
+  VITE_API_URL = "https://<YOUR_BACKEND_URL>"
+  # Keep AI disabled by default for safe deployments. Set to "true" to enable (requires backend USE_AI=true and secure credentials).
+  VITE_USE_AI = "false"
