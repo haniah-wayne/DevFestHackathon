@@ -1,0 +1,343 @@
+/* ================================
+	 GLOBAL BRAND VARIABLES
+=================================== */
+
+:root {
+	--color-navy: #00274C; /* deep michigan blue */
+	--color-navy-dark: #001A33;
+	--color-bg: #0A1A36; /* gradient background */
+	--color-maize: #FFCB05; /* michigan maize */
+	--color-text-light: #F5F7FA;
+	--color-text-muted: #D6D8DE;
+	--color-card-bg: #13294B;
+	--color-button-dark: #1D3358;
+  
+	--radius-lg: 18px;
+	--radius-md: 10px;
+	--radius-sm: 6px;
+
+	--shadow-card: 0px 6px 18px rgba(0, 0, 0, 0.25);
+	--shadow-hover: 0px 10px 25px rgba(0,0,0,0.35);
+
+	--font-header: 'Inter', sans-serif;
+	--font-body: 'Inter', sans-serif;
+}
+
+
+/* ================================
+	 GLOBAL BASE STYLES
+=================================== */
+
+body {
+	margin: 0;
+	padding: 0;
+	background: var(--color-navy-dark);
+	color: var(--color-text-light);
+	font-family: var(--font-body);
+	overflow-x: hidden;
+}
+
+h1, h2, h3 {
+	font-family: var(--font-header);
+	color: var(--color-text-light);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
+p {
+	font-size: 16px;
+	color: var(--color-text-muted);
+}
+
+
+/* ================================
+	 NAVBAR STYLING
+=================================== */
+
+.navbar {
+	width: 100%;
+	background: white;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 18px 60px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+}
+
+.navbar a {
+	color: var(--color-navy);
+	text-decoration: none;
+	font-weight: 500;
+	margin: 0 18px;
+	font-size: 15px;
+}
+
+.nav-right {
+	display: flex;
+	gap: 20px;
+}
+
+
+/* ================================
+	 BUTTONS
+=================================== */
+
+.btn-primary {
+	background: var(--color-maize);
+	padding: 14px 32px;
+	border-radius: var(--radius-md);
+	border: none;
+	font-weight: 600;
+	font-size: 18px;
+	color: var(--color-navy);
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.btn-primary:hover {
+	filter: brightness(1.08);
+	transform: translateY(-3px);
+}
+
+.btn-secondary {
+	background: var(--color-button-dark);
+	padding: 14px 32px;
+	border-radius: var(--radius-md);
+	color: white;
+	font-size: 18px;
+	border: none;
+	cursor: pointer;
+	transition: 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+	transform: translateY(-3px);
+	background: #2C4670;
+}
+
+
+/* ================================
+	 HERO SECTION
+=================================== */
+
+.hero {
+	background: linear-gradient(180deg, var(--color-navy) 0%, var(--color-navy-dark) 100%);
+	padding: 160px 0 120px;
+	text-align: center;
+	color: white;
+}
+
+.hero h1 {
+	font-size: 64px;
+	margin-bottom: 15px;
+}
+
+.hero h1 span {
+	color: var(--color-maize);
+}
+
+.hero-subtext {
+	font-size: 18px;
+	max-width: 850px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
+.hero-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+}
+
+
+/* ================================
+	 ROLE CARDS (For Companies / Labs / Students)
+=================================== */
+
+.roles-section {
+	margin: 80px auto;
+	display: flex;
+	justify-content: center;
+	gap: 40px;
+	padding: 40px 0;
+}
+
+.role-card {
+	background: var(--color-card-bg);
+	width: 300px;
+	padding: 40px;
+	border-radius: var(--radius-lg);
+	text-align: center;
+	box-shadow: var(--shadow-card);
+	transition: 0.25s ease;
+}
+
+.role-card:hover {
+	transform: translateY(-6px);
+	box-shadow: var(--shadow-hover);
+}
+
+.role-card-title {
+	font-weight: 700;
+	font-size: 20px;
+	margin-top: 10px;
+	color: var(--color-text-light);
+}
+
+.role-card p {
+	color: var(--color-text-muted);
+	font-size: 14px;
+	margin-top: 10px;
+}
+
+
+/* ================================
+	 BADGE LABEL ABOVE HERO
+=================================== */
+
+.badge {
+	margin: 0 auto;
+	background: rgba(255,255,255,0.12);
+	border: 1px solid rgba(255,255,255,0.22);
+	padding: 10px 22px;
+	border-radius: 30px;
+	color: var(--color-text-muted);
+	font-size: 14px;
+	display: inline-block;
+	margin-bottom: 30px;
+}
+
+
+/* ================================
+	 HERO CARDS SECTION
+=================================== */
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+.card-row { display:flex; gap:20px; justify-content:center; margin-top:30px; }
+
+.info-card { background: var(--color-card-bg); padding: 20px; border-radius: 12px; box-shadow: var(--shadow-card); color: var(--color-text-light); }
+
+
+/* ================================
+	 RESPONSIVENESS
+=================================== */
+
+@media (max-width: 900px) {
+	.hero h1 {
+		font-size: 46px;
+	}
+	.roles-section {
+		flex-direction: column;
+		align-items: center;
+	}
+	.navbar { padding: 12px 18px }
+}
+
+/* small helper */
+a { color: inherit }
+
+/* ===== Student Dashboard Layout ===== */
+
+/* PAGE */
+.dashboard {
+  min-height: 100vh;
+  background: #f9fafc;
+  padding-top: 80px;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 48px;
+}
+
+/* TITLES */
+.header-title {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #0A1A36;
+}
+
+.available-title {
+  margin-top: 60px;
+  font-size: 34px;
+  font-weight: 700;
+  color: #0A1A36;
+}
+
+.header-sub {
+  color: #6A7382;
+  margin-bottom: 32px;
+}
+
+/* GRID */
+.class-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  gap: 32px;
+}
+
+/* CARDS */
+.card {
+  background: #ffffff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 24px;
+  text-decoration: none;
+  color: #111;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.08);
+  transform: translateY(-4px);
+}
+
+/* ICON */
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #1c376d, #00274C);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.card-desc {
+  font-size: 14px;
+  color: #6A7382;
+  margin-bottom: 16px;
+}
+
+.semester {
+  font-size: 14px;
+  color: #6A7382;
+}
+
+.project-count {
+  font-size: 14px;
+  font-weight: bold;
+  color: #00274C;
+}
+
+/* PROJECT SECTION */
+.project-card {
+  padding: 24px;
+  margin-top: 24px;
+}
+.project-title {
+  font-size: 24px;
+  font-weight: bold;
+}
